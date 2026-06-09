@@ -1055,8 +1055,26 @@ p {
   box-shadow: 0 4px 12px rgba(79, 255, 176, 0.3);
 }
 
-.center-btn { display: block; width: 100%; margin-bottom: 12px; }
+.center-btn { display: block; width: 100%;  }
 .download-icon { font-size: 1rem; vertical-align: middle; }
+
+.center-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;                 /* Space between icon and text */
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+     width: 100%;
+     margin-bottom: 12px;
+}
+
+.center-btn i {
+    font-size: 1.2rem;
+    color: #25D366;           /* WhatsApp green */
+}
 
 /* ============================================================
    FADE-IN SCROLL ANIMATION
