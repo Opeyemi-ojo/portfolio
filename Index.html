@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- SEO -->
+<title>Opeyemi Ojo-portfolio</title>
+<meta name="description" content="Portfolio of Opeyemi Ojo -- UI/UX and Frontend Developer building scalable, conversion-focused digital products." />
+<meta name="keywords" content="UI UX Designer, Frontend Developer, Portfolio, Web Developer" />
+<meta name="author" content="Opeyemi Ojo" />
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="Opeyemi Ojo | Frontend Developer" />
+<meta property="og:description" content="Building scalable, conversion-focused digital products" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://yourwebsite.com" />
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<!-- Fonts for hero animation -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+<link rel="icon" href="images/favicon2.svg" type="image/svg+xml">
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<!-- SCROLL PROGRESS INDICATOR -->
+<div id="scrollProgress" class="scroll-progress"></div>
+
+<!-- Theme Toggle Button (moved to top position, weather toggle removed) -->
+<button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+  <span class="theme-icon">🌙</span>
+</button>
+
+<!-- AVAILABILITY STATUS -->
+<div class="availability-status">
+  <span class="status-dot"></span>
+  <span class="status-text">Available for projects</span>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     HERO ANIMATION NAV (replaces old header)
+════════════════════════════════════════════════════ -->
+<nav class="hero-nav" id="heroNav">
+  <div class="nav-logo">Opeyemi Ojo</div>
+
+  <!-- Desktop nav links -->
+  <div class="nav-links" id="navLinks">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#industries">Industries</a>
+    <a href="#education">Education</a>
+    <a href="#Experience">Experience</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="#contact" class="nav-cta">Hire Me</a>
+    <!-- Mobile hamburger -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════
+     HERO SECTION (full animation)
+════════════════════════════════════════════════════ -->
+<section id="home" class="hero">
+
+  <!-- Ambient orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <!-- Floating skill pills -->
+  <div class="pills-field" id="pills-field">
+    <!-- Mobile-visible pills (top cluster) -->
+    <div class="pill active mobile-show" style="top:9%;left:2%;--dur:7s;--delay:0.3s">React</div>
+    <div class="pill purple mobile-show" style="top:8.5%;left:45%;--dur:6s;--delay:1.2s">Next.js</div>
+    <div class="pill coral mobile-show" style="top:9%;right:2%;--dur:7.5s;--delay:1s">Figma</div>
+    <div class="pill coral" style="top:22%;left:14%;--dur:9s;--delay:0.8s">TypeScript</div>
+    <!-- Mobile-visible pills (bottom cluster) -->
+    <div class="pill mobile-show" style="bottom:17%;left:2%;--dur:8.5s;--delay:1.5s">GraphQL</div>
+    <div class="pill active mobile-show" style="bottom:13%;left:38%;--dur:11s;--delay:0.9s">Node.js</div>
+    <div class="pill coral mobile-show" style="bottom:17%;right:2%;--dur:9s;--delay:1.8s">Three.js</div>
+    <!-- Desktop-only pills -->
+    <div class="pill" style="top:18%;right:26%;--dur:8s;--delay:0.5s">Tailwind CSS</div>
+    <div class="pill active" style="top:15%;right:25%;--dur:10s;--delay:0.2s">Node.js</div>
+    <div class="pill purple" style="bottom:22%;left:16%;--dur:6.5s;--delay:0.7s">Framer Motion</div>
+    <div class="pill" style="bottom:18%;right:4%;--dur:7s;--delay:0.4s">PostgreSQL</div>
+    <div class="pill active" style="top:40%;left:2%;--dur:11s;--delay:0.9s">Web APIs</div>
+    <div class="pill" style="top:38%;right:2%;--dur:8s;--delay:1.3s">Vite</div>
+    <div class="pill purple" style="bottom:45%;left:7%;--dur:10s;--delay:2.0s">Docker</div>
+    <div class="pill coral" style="bottom:42%;right:7%;--dur:9.5s;--delay:0.6s">CI/CD</div>
+    <div class="pill" style="top:55%;left:18%;--dur:7.5s;--delay:1.6s">REST APIs</div>
+    <div class="pill active" style="top:52%;right:18%;--dur:8.5s;--delay:1.1s">PWA</div>
+  </div>
+
+  <!-- Main center content -->
+  <div class="hero-center">
+
+    <div class="eyebrow">Available for Freelance &amp; Full-time</div>
+
+    <h1 class="headline">
+      <span class="hl-line-1">I build</span>
+      <span class="hl-line-2">
+        <span class="word-rotator" id="rotator">
+          <span class="visible">fast interfaces</span>
+          <span>clean systems</span>
+          <span>scalable apps</span>
+          <span>bold products</span>
+        </span>
+      </span>
+      <span class="hl-line-3">that <span class="hl-italic">matter</span></span>
+    </h1>
+
+    <p class="sub">
+      Frontend developer crafting pixel-perfect,
+      performant web experiences — from Lagos to the world.
+    </p>
+
+    <div class="hero-ctas">
+      <a href="#projects" class="btn-primary">View My Work →</a>
+     <a href="Doc/Opeyemi Ojo_Frontend Developer.pdf" id="downloadCVBtn" download="Opeyemi Ojo_Frontend Developer.pdf" class="btn-secondary"><span class="download-icon">⬇</span> Download CV</a>
+    </div>
+
+  </div>
+
+  <!-- Marquee -->
+  <div class="marquee-section">
+    <div class="marquee-label">Tech I work with daily</div>
+    <div class="marquee-track" id="marquee-track"></div>
+  </div>
+
+  <!-- Stats row -->
+  <div class="stats-row">
+    <div class="stat-item">
+      <div class="stat-num"><span class="accent" id="c1">0</span>+</div>
+      <div class="stat-label">Projects Shipped</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num"><span class="accent" id="c2">0</span>+</div>
+      <div class="stat-label">Happy Clients</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num"><span class="accent" id="c3">0</span>+</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num"><span id="c4">0</span>K</div>
+      <div class="stat-label">Lines of Code</div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    Scroll
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     ABOUT ME SECTION
+════════════════════════════════════════════════════ -->
+<section id="about" class="about-section fade-in-section">
+  <div class="container">
+    <h3 class="section-title">About <span class="heading2">Me</span></h3>
+    <div class="about-layout">
+
+      <!-- Photo — left on desktop, top on mobile -->
+      <div class="about-photo-col reveal-card">
+        <div class="about-photo-wrap">
+          <img src="Profiledp.png" alt="Profilepix" class="about-photo">
+        </div>
+      </div>
+
+      <!-- Text — right on desktop, below on mobile -->
+      <div class="about-text-col reveal-card">
+        <p>I'm <strong><span class="heading2">Opeyemi Ojo,</span></strong> a passionate Frontend Developer | UX Researcher
+        with <strong>more than 2 years of experience</strong> building Web apps, Dashboards, Landing pages, Webpages and other digital products that not only
+        look stunning but also deliver measurable business results. My approach combines creative user thinking with technical expertise to build solutions that
+        users love.</p>
+        <p>With a strong foundation in user experience and development, I bridge the gap between
+        beautiful user experience and functionality. I believe that great products are born from understanding user
+        needs, business goals, and technical constraints — then finding the sweet spot where all three
+        align perfectly... <i>Fullstack Development – In-view</i></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS AND TECHNOLOGY SECTION -->
+
+<section id="skills" class="skills-tech fade-in-section">
+  <div class="container">
+    <h3 class="section-title">Skills & <span class="heading2">Technologies</span></h3>
+    <div class="skills-grid">
+      <div class="skill-category-card card reveal-card from-left">
+        <h4>Frontend Development</h4>
+        <div class="skill-items">
+          <div class="skill-item-with-icon">
+            <div class="skill-icon-placeholder">
+              <img src="images/html5.png" alt="Html5 logo" class="skill-icon-img">
+            </div>
+            <span>HTML5 &amp; CSS3</span>
+          </div>
+          <div class="skill-item-with-icon">
+            <div class="skill-icon-placeholder">
+              <img src="images/JavaScript.png" alt="JavaScript logo" class="skill-icon-img">
+            </div>
+            <span>JavaScript (ES6+)</span>
+          </div>
+          <div class="skill-item-with-icon">
+            <div class="skill-icon-placeholder">
+              <img src="images/React.png" alt="React logo" class="skill-icon-img">
+            </div>
+            <span>React</span>
+          </div>
+          <div class="skill-item-with-icon">
+            <div class="skill-icon-placeholder">
+              <img src="images/TypeScript.png" alt="TypeScript logo" class="skill-icon-img">
+            </div>
+            <span>TypeScript</span>
+          </div>
+          <div class="skill-item-with-icon">
+            <div class="skill-icon-placeholder">
+              <img src="images/Tailwind CSS.png" alt="Tailwind logo" class="skill-icon-img">
+            </div>
+            <span>Tailwind CSS</span>
+          </div>
+          <div class="skill-item-with-icon">
+            <div class="skill-icon-placeholder">
+              <img src="images/Next.js.png" alt="Next.js logo" class="skill-icon-img">
+            </div>
+            <span>Next.js</span>
+          </div>
+        </div>
+      </div>
+      <div class="skill-category-card card reveal-card from-bottom">
+        <h4>Backend Development</h4>
+        <div class="skill-items">
+          <div class="skill-item-with-icon">
+            <div class="skill-icon-placeholder">
+              <img src="images/Node.js.png" alt="Node.js logo" class="skill-icon-img">
+            </div>
+            <span>Node.js</span>
+          </div>
+          <div class="skill-item-with-icon">
+            <div class="skill-icon-placeholder">
+              <img src="images/Python.png" alt="Python logo" class="skill-icon-img">
+            </div>
+            <span>Python</span>
+          </div>
+          <div class="skill-item-with-icon">
+            <div class="skill-icon-placeholder">
+              <img src="images/laravel.png" alt="DB logo" class="skill-icon-img">
+            </div>
+            <span>Laravel</span>
+          </div>
+          <div class="skill-item-with-icon">
+            <div class="skill-icon-placeholder">
+              <img src="images/Express.png" alt="Express logo" class="skill-icon-img">
+            </div>
+            <span>Express</span>
+          </div>
+          <div class="skill-item-with-icon">
+            <div class="skill-icon-placeholder">
+              <img src="images/MySQL.png" alt="MySQL logo" class="skill-icon-img">
+            </div>
+            <span>MySQL</span>
+          </div>
+          <div class="skill-item-with-icon">
+            <div class="skill-icon-placeholder">
+              <img src="images/mongoDB.png" alt="MongoDB" class="skill-icon-img">
+            </div>
+            <span>MongoDB</span>
+          </div>
+        </div>
+      </div>
+      <div class="skill-category-card card reveal-card from-right">
+        <h4>DevOps Tools</h4>
+        <div class="skill-items">
+          <div class="skill-item-with-icon">
+            <div class="skill-icon-placeholder">
+              <img src="images/Git.png" alt="Git logo" class="skill-icon-img">
+            </div>
+            <span>Git</span>
+          </div>
+          <div class="skill-item-with-icon">
+            <div class="skill-icon-placeholder">
+              <img src="images/Visual Studio Code (VS Code).png" alt="VS Code logo" class="skill-icon-img">
+            </div>
+            <span>VS Code</span>
+          </div>
+          <div class="skill-item-with-icon">
+            <div class="skill-icon-placeholder">
+              <img src="images/GitHub.png" alt="GitHub logo" class="skill-icon-img">
+            </div>
+            <span>GitHub</span>
+          </div>
+          <div class="skill-item-with-icon">
+            <div class="skill-icon-placeholder">
+              <img src="images/Docker.png" alt="Docker logo" class="skill-icon-img">
+            </div>
+            <span>Docker</span>
+          </div>
+          <div class="skill-item-with-icon">
+            <div class="skill-icon-placeholder">
+              <img src="images/Vite.js.png" alt="Vite logo" class="skill-icon-img">
+            </div>
+            <span>Vite</span>
+          </div>
+          <div class="skill-item-with-icon">
+            <div class="skill-icon-placeholder">
+              <img src="images/Jira.png" alt="Jira logo" class="skill-icon-img">
+            </div>
+            <span>Jira</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects" class="fade-in-section">
+  <h3 class="section-title">Projects <span class="heading2">Featured</span></h3>
+  <div class="project-filters">
+    <button class="btn-filter active" data-filter="all">All</button>
+    <button class="btn-filter" data-filter="dashboard">Dashboard</button>
+    <button class="btn-filter" data-filter="saas">SaaS</button>
+    <button class="btn-filter" data-filter="website">Website & Landing Page</button>
+  </div>
+  <div class="projects-grid-container">
+    <div class="project-card card reveal-card from-left" data-category="dashboard">
+      <div class="project-image-placeholder">
+        <div class="placeholder-icon"><img src="images/Design/fitplus.png" alt="project" class="industries-image"></div>
+       
+      </div>
+      <h5 class="certificate-title">Fitpluse</h5>
+      <p>Fitness dashboard with workout tracking, nutrition management, progress analytics, and personalized performance insights.</p>
+      <div class="project-tags">
+        <span class="tag2">React</span>
+        <span class="tag2">JS</span>
+        <span class="tag2">JSX</span>
+        <span class="tag2">CSS3</span>
+         <span class="tag2">Chart.js</span>
+      </div>
+      <a href="#" class="project-link">View Live Project →</a>
+    </div>
+    <div class="project-card card reveal-card from-bottom" data-category="saas">
+      <div class="project-image-placeholder">
+        <div class="placeholder-icon"> <img src="images/Design/repurposeAI.png" alt="project" class="industries-image"></div>
+  
+      </div>
+      <h5 class="certificate-title">RepurposeAI</h5>
+      <p>AI-powered SaaS platform for repurposing content into optimized social posts, threads, and multi-platform marketing content
+         with analytics and tone profiles.</p>
+      <div class="project-tags">
+        <span class="tag2">React</span>
+        <span class="tag2">JS</span>
+        <span class="tag2">JSX</span>
+        <span class="tag2">CSS3</span>
+        <span class="tag2">Chart.js</span>
+      </div>
+      <a href="#" class="project-link">View Live Proj ect →</a>
+    </div>
+    <div class="project-card card reveal-card from-right" data-category="dashboard">
+      <div class="project-image-placeholder">
+        <div class="placeholder-icon"><img src="images/Design/Finova.png" alt="project" class="industries-image"></div>
+        
+      </div>
+      <h5 class="certificate-title">Finova</h5>
+      <p>Financial dashboard with transaction tracking, budget management, and actionable spending insights through interactive 
+        analytics</p>
+      <div class="project-tags">
+        <span class="tag2">vanilla Js</span>
+        <span class="tag2">Chart.js</span>
+        <span class="tag2">CSS3</span>
+         <span class="tag2">HTML</span>
+      </div>
+      <a href="#" class="project-link">View Live Project →</a>
+    </div>
+
+  <div class="project-card card reveal-card from-left" data-category="website">
+      <div class="project-image-placeholder">
+        <div class="placeholder-icon"><img src="images/Design/Bridgegrant.png" alt="project" class="industries-image"></div>
+       
+      </div>
+      <h5 class="certificate-title">Bridgegrant</h5>
+      <p>Community-powered platform for discovering verified grants, scholarships, sponsorships, and funding opportunities worldwide.</p>
+      <div class="project-tags">
+        <span class="tag2">HTML</span>
+        <span class="tag2">CSS3</span>
+        <span class="tag2">JavaScript</span>
+      </div>
+      <a href="#" class="project-link">View Live Project →</a>
+    </div>
+    <div class="project-card card reveal-card from-bottom" data-category="saas">
+      <div class="project-image-placeholder">
+        <div class="placeholder-icon"> <img src="images/Design/Meetmind.png" alt="project" class="industries-image"></div>
+  
+      </div>
+      <h5 class="certificate-title">Meetmind</h5>
+      <p>AI-powered SaaS platform that converts meeting minutes into actionable summaries, key decisions, and multilingual insights.</p>
+      <div class="project-tags">
+        <span class="tag2">HTML</span>
+        <span class="tag2">CSS3</span>
+        <span class="tag2">vanilla Js</span>
+        
+      </div>
+      <a href="#" class="project-link">View Live Project →</a>
+    </div>
+    <div class="project-card card reveal-card from-right" data-category="dashboard">
+      <div class="project-image-placeholder">
+        <div class="placeholder-icon"><img src="images/Design/Nusapalm.png" alt="project" class="industries-image"></div>
+        
+      </div>
+      <h5 class="certificate-title">Nusapalm</h5>
+      <p>Palm production dashboard with farm management, inventory tracking, sales monitoring, financial reporting, 
+        and supply chain analytics.</p>
+      <div class="project-tags">
+        <span class="tag2">JavaScript</span>
+        <span class="tag2">CSS3</span>
+        <span class="tag2">JSON</span>
+        <span class="tag2">HTML</span>
+        <span class="tag2">Chart.Js</span>
+      </div>
+      <a href="#" class="project-link">View Live Project →</a>
+    </div>
+    <div class="project-card card reveal-card from-left" data-category="website">
+      <div class="project-image-placeholder">
+        <div class="placeholder-icon"><img src="images/Design/AgroVerde.png" alt="project" class="industries-image"></div>
+       
+      </div>
+      <h5 class="certificate-title">AgroVerde</h5>
+      <p>Agribusiness platform connecting farmers and food businesses with sustainable farming solutions, expert services, 
+        and industry insights.</p>
+      <div class="project-tags">
+        <span class="tag2">HTML</span>
+        <span class="tag2">CSS3</span>
+        <span class="tag2">vanilla Js</span>
+      </div>
+      <a href="#" class="project-link">View Live Project →</a>
+    </div>
+    <div class="project-card card reveal-card from-bottom" data-category="website">
+      <div class="project-image-placeholder">
+        <div class="placeholder-icon"> <img src="images/Design/Elera2.png" alt="project" class="industries-image"></div>
+  
+      </div>
+      <h5 class="certificate-title">Elera</h5>
+      <p>Real estate platform for discovering, buying, selling, and leasing premium properties with expert guidance 
+        and seamless navigation.</p>
+      <div class="project-tags">
+        <span class="tag2">HTML</span>
+        <span class="tag2">CSS3</span>
+        <span class="tag2">JavaScript</span>
+      </div>
+      <a href="#" class="project-link">View Live Project →</a>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+
+<section id="industries" class="fade-in-section">
+  <h3 class="section-title">Industries <span class="heading2">Expertise</span></h3>
+  <div class="industry-grid" id="industryGrid">
+    <div class="card industry-card reveal-card from-left">
+      <div class="industry-image-wrapper">
+        <img src="images/Design/Ecommerce.png" alt="E-commerce" class="industries-image2">
+        <div class="industry-icon-badge">🛒</div>
+      </div>
+      <div class="industry-card-body">
+        <h4>E-commerce</h4>
+        <p>I help brands grow by building high-converting storefronts and user-friendly dashboards designed to maximize conversions, 
+          streamline operations, and deliver measurable business results..</p>
+        <a href="#contact" class="btn btn-industry-cta">Let's Get Started</a>
+      </div>
+    </div>
+    <div class="card industry-card reveal-card from-right">
+      <div class="industry-image-wrapper">
+        <img src="images/Design/Fintech.png" alt="FinTech" class="industries-image2">
+        <div class="industry-icon-badge">💰</div>
+      </div>
+      <div class="industry-card-body">
+        <h4>FinTech</h4>
+        <p>I design and develop secure financial dashboards and apps that simplify complex data, 
+          improve operational efficiency, and deliver actionable insights in real time.</p>
+        <a href="#contact" class="btn btn-industry-cta">Let's Get Started</a>
+      </div>
+    </div>
+    <div class="card industry-card reveal-card from-left">
+      <div class="industry-image-wrapper">
+         <img src="images/Design/Education.png" alt="Education" class="industries-image2">
+        <div class="industry-icon-badge">🎓</div>
+      </div>
+      <div class="industry-card-body">
+        <h4>EdTech</h4>
+        <p>I build engaging learning platforms and LMS systems that improve learner engagement, 
+          streamline course delivery, and drive measurable educational outcomes.</p>
+        <a href="#contact" class="btn btn-industry-cta">Let's Get Started</a>
+      </div>
+    </div>
+    <div class="card industry-card reveal-card from-right">
+      <div class="industry-image-wrapper">
+        <img src="images/Design/SaaS.png" alt="Saas" class="industries-image2">
+        <div class="industry-icon-badge">🚀</div>
+      </div>
+      <div class="industry-card-body">
+        <h4>SaaS</h4>
+        <p>I design and develop scalable SaaS solutions with clean, maintainable architecture that supports 
+          rapid innovation, operational efficiency, and business growth</p>
+        <a href="#contact" class="btn btn-industry-cta">Let's Get Started</a>
+      </div>
+    </div>
+    <div class="card industry-card reveal-card from-left">
+      <div class="industry-image-wrapper">
+        <img src="images/Design/Healthcare2.png" alt="HealthTech" class="industries-image2">
+        <div class="industry-icon-badge">🏥</div>
+      </div>
+      <div class="industry-card-body">
+        <h4>HealthTech</h4>
+        <p>I create user-centered digital health products that combine seamless experiences, regulatory compliance, 
+          and reliable performance to drive better healthcare outcomes.</p>
+        <a href="#contact" class="btn btn-industry-cta">Let's Get Started</a>
+      </div>
+    </div>
+    <div class="card industry-card reveal-card from-right">
+      <div class="industry-image-wrapper">
+        <img src="images/Design/Marketing.png" alt="Marketing" class="industries-image2">
+        <div class="industry-icon-badge">📱</div>
+      </div>
+      <div class="industry-card-body">
+        <h4>Marketing</h4>
+        <p>I create performance-driven landing pages optimized for conversions, 
+          lead generation, and measurable business results across every campaign.</p>
+        <a href="#contact" class="btn btn-industry-cta">Let's Get Started</a>
+      </div>
+    </div>
+    <!-- Additional 2 industries - Hidden by default -->
+    <div class="card industry-card  hidden reveal-card from-left">
+      <div class="industry-image-wrapper">
+        <img src="images/Design/real-estate.png" alt="Real-esate" class="industries-image2">
+        <div class="industry-icon-badge">🏠</div>
+      </div>
+      <div class="industry-card-body">
+        <h4>Real Estate</h4>
+        <p>I build modern property listing and management platforms that simplify operations, enhance
+          user experiences, and help real estate businesses scale efficiently.</p>
+        <a href="#contact" class="btn btn-industry-cta">Let's Get Started</a>
+      </div>
+    </div>
+    <div class="card industry-card  hidden reveal-card from-right">
+      <div class="industry-image-wrapper">
+         <img src="images/Design/Travel.png" alt="Travel" class="industries-image2">
+        <div class="industry-icon-badge">✈</div>
+      </div>
+      <div class="industry-card-body">
+        <h4>Travel &amp; Hospitality</h4>
+        <p>I design and develop modern travel and booking platforms that deliver intuitive user experiences, 
+          increase conversions, and make travel management effortless</p>
+        <a href="#contact" class="btn btn-industry-cta">Let's Get Started</a>
+      </div>
+    </div>
+   </div>
+  <button id="toggleIndustriesBtn" class="btn btn-secondary toggle-industries-btn">See More ▼</button>
+  </div>
+</section>
+
+<!-- EXPERIENCE TIMELINE -->
+
+<section id="Experience" class="experience fade-in-section">
+  <div class="container">
+    <h3 class="section-title">Work <span class="heading2">Experience</span></h3>
+    <div class="timeline">
+      <div class="timeline-item reveal-card from-left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content card">
+          <div class="timeline-header">
+            <h4>Junior Frontend Developer</h4>
+            <span class="timeline-date"><span class="cal-icon">📅</span>JUN 2025 – Present</span>
+          </div>
+          <p class="timeline-company">TechNova Solutions  —  <span class="timeline-remote">Remote</span></p>
+          <p class="experience-timeline">▸ React.js; Architected and developed responsive, high-performance web applications.</p>
+          <p class="experience-timeline">▸ Built reusable component libraries with React Hooks cutting development time by 40% across projects.</p>
+          <p class="experience-timeline">▸ Built an interactive dashboard for tracking transactions, managing budgets, and visualizing financial 
+            performance through dynamic charts and insights.</p>
+          <p class="experience-timeline">▸ Collaborated with other developers, designers, and product managers to build and ship working products.</p>
+          <div class="project-2tags">
+            <span class="tag2">React.js</span>
+            <span class="tag2">Chart.js</span>
+            <span class="tag2">Tailwind</span>
+            <span class="tag2">Redux</span>
+            <span class="tag2">Git</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal-card from-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content card">
+          <div class="timeline-header">
+            <h4>Junior Frontend Developer (Contract)</h4>
+            <span class="timeline-date"><span class="cal-icon">📅</span>NOV 2024 – MAY 2025</span>
+          </div>
+          <p class="timeline-company">BrightCode Agency — <span class="timeline-remote">Remote</span></p>
+          <p class="experience-timeline">▸ Designed and delivered responsive frontend interfaces for 5+ client projects including e-commerce platforms, SaaS dashboards, and corporate websites.</p>
+          <p class="experience-timeline">▸ Optimized page load speed through code-splitting, lazy loading, and image compression, achieving a 35% improvement in load time.</p>
+          <p class="experience-timeline">▸ Maintained clean, well-documented codebases, reducing handoff friction and enabling faster onboarding of new developers.</p>
+          <div class="project-2tags">
+            <span class="tag2">JS</span>
+            <span class="tag2">React.js</span>
+            <span class="tag2">Tailwind</span>
+            <span class="tag2">JSX</span>
+            <span class="tag2">CSS</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal-card from-left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content card">
+          <div class="timeline-header">
+            <h4>Junior Website Developer (Contract)</h4>
+            <span class="timeline-date"><span class="cal-icon">📅</span>DEC 2023 – JUL 2024</span>
+          </div>
+          <p class="timeline-company">WebForge Creatives  —  <span class="timeline-remote">Remote</span></p>
+          <p class="experience-timeline">▸ Developed and maintained landing pages, product catalogs, and business websites for SME clients using HTML, CSS & vanilla JavaScript.</p>
+          <p class="experience-timeline">▸ Built interactive UI components including sliders, modals, form validators, and dynamic filtering systems from scratch.</p>
+          <p class="experience-timeline">▸ Participated in code reviews and implemented feedback to maintain coding standards across the team.</p>
+          <p class="experience-timeline">▸ Delivered 10+ websites across diverse industries including logistics, education, and retail within tight deadlines.</p>
+          <div class="project-2tags">
+            <span class="tag2">Bootstrap</span>
+            <span class="tag2">HTML5</span>
+            <span class="tag2">CSS3</span>
+            <span class="tag2">JS</span>
+            <span class="tag2">Wordpress</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION SECTION -->
+
+<section id="education" class="education fade-in-section">
+  <div class="container">
+    <h3 class="section-title">Education</h3>
+    <div class="timeline">
+      <div class="timeline-item reveal-card from-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content card">
+          <div class="timeline-header">
+            <h4>HND — Higher National Diploma, Computer Science</h4>
+            <span class="timeline-date"><span class="cal-icon">📅</span>2018 – 2020</span>
+          </div>
+          <p class="timeline-company">Federal School of Statistics, Nigeria</p>
+          <p class="Education-timeline">Focused on Software engineering, Website architecture, design and development,
+             and Human-computer interaction.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item reveal-card from-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content card">
+          <div class="timeline-header">
+            <h4>Professional Certificate in Frontend Development</h4>
+            <span class="timeline-date"><span class="cal-icon">📅</span>OCT 2023</span>
+          </div>
+          <p class="timeline-company">VIT — Virtual Instrumentation Technology</p>
+          <p class="Education-timeline">Focused on frontend development, specializing in responsive user interfaces using HTML, 
+            CSS, JavaScript, React and modern web technologies..</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal-card from-left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content card">
+          <div class="timeline-header">
+            <h4>Certification in Web Security Fundamentals</h4>
+            <span class="timeline-date"><span class="cal-icon">📅</span>FEB 2024</span>
+          </div>
+          <p class="timeline-company">VIT — Virtual Instrumentation Technology</p>
+          <p class="Education-timeline">Focused on gaining practical knowledge in identifying and mitigating common web vulnerabilities,
+             implementing secure coding standards, and applying OWASP security guidelines to build safer web applications..</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATES SECTION -->
+
+<section id="certificates" class="certificates fade-in-section">
+  <div class="container">
+    <h3 class="section-title">Certifications</h3>
+    <div class="certificates-grid">
+      <div class="certificate-card card reveal-card from-left">
+  <div class="certificate-image-placeholder">
+    <img src="images/Design/Frontend.png" alt="Certificate" class="certificate-image industries-image">
+  </div>
+
+  <h5 class="certificate-title">Frontend Development</h5>
+
+  <p class="certificate-description">
+    Certified in frontend development, specializing in responsive user interfaces using HTML, CSS, JavaScript, React and modern web technologies.
+  </p>
+</div>
+      <div class="certificate-card card reveal-card from-right">
+        <div class="certificate-image-placeholder">
+          <img src="images/Design/Website-dev.png" alt="Certificate" class="certificate-image industries-image">
+          </div>
+          <h5 class="certificate-title">Website Development</h5>
+          <p class="certificate-description">Certified in WordPress website development, hosting setup, security, and website maintenance..</p>
+        </div>
+  
+      <div class="certificate-card card  hidden reveal-card from-left">
+        <div class="certificate-image-placeholder">
+          <img src="images/Design/Certificate.jpg" alt="Certificate" class="industries-image industries-image">
+          </div>
+          <h5 class="certificate-title">Computer Fundamentals & Digital Skills</h5>
+          <p class="certificate-description">Certified in computer fundamentals, productivity tools, internet usage, and digital workplace skills.</p>
+      </div>
+      <div class="certificate-card card  hidden reveal-card from-right">
+        <div class="certificate-image-placeholder">
+         <img src="images/Design/Web-sec.png" alt="Certificate" class="industries-image industries-image">
+         </div>
+          <h5 class="certificate-title">Web Security Fundamentals</h5>
+          <p class="certificate-description">Gained practical knowledge in identifying and mitigating common web vulnerabilities,
+             implementing secure coding standards, and applying OWASP security guidelines to build safer web applications..</p>
+      </div>
+    </div>
+    <button id="toggleCertificatesBtn" class="btn btn-secondary toggle-certificates-btn">See More ▼</button>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section id="testimonials" class="testimonials-section fade-in-section">
+  <div class="container">
+    <h3 class="section-title">Testimonials</h3>
+    <div class="carousel-container">
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="testimonialTrack">
+          <div class="testimonial-card card reveal-card from-bottom">
+            <div class="quote-icon">"</div>
+            <p>"Professional, reliable and highly skilled. Delivered our project ahead of schedule with exceptional quality."</p>
+            <div class="testimonial-author">
+              <strong>Sarah Johnson</strong>
+              <span>CEO, TechStart Inc.</span>
+            </div>
+          </div>
+          <div class="testimonial-card card reveal-card from-bottom">
+            <div class="quote-icon">"</div>
+            <p>"Delivered beyond expectations. The attention to detail and user experience was outstanding."</p>
+            <div class="testimonial-author">
+              <strong>Michael Chen</strong>
+              <span>Product Manager, InnovateCo</span>
+            </div>
+          </div>
+          <div class="testimonial-card card reveal-card from-bottom">
+            <div class="quote-icon">"</div>
+            <p>"Excellent communication and execution. Turned our vision into reality with impressive precision."</p>
+            <div class="testimonial-author">
+              <strong>Emily Rodriguez</strong>
+              <span>Founder, DesignHub</span>
+            </div>
+          </div>
+          <div class="testimonial-card card reveal-card from-bottom">
+            <div class="quote-icon">"</div>
+            <p>"Amazing work ethic and creativity. The final product exceeded all our expectations and boosted our conversions significantly."</p>
+            <div class="testimonial-author">
+              <strong>David Thompson</strong>
+              <span>Marketing Director, GrowthLab</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT + FAQ -->
+ 
+<section id="contact" class="split fade-in-section">
+  <div class="card">
+    <h3>Contact <span class="heading2">Me</span></h3>
+    <div class="contact-methods">
+      <a href="https://github.com/Proffyjayz" target="_blank" class="contact-method">
+        <img src="images/GitHub.png" alt="GitHub logo" class="social-icon">
+        <span>GitHub Profile</span>
+      </a>
+      <a href="https://www.linkedin.com/in/opeyemi-ojo-zzz" target="_blank" class="contact-method">
+        <img src="images/LinkedIn.png" alt="LinkedIn logo" class="social-icon">
+        <span>LinkedIn Profile</span>
+      </a>
+    
+    </div>
+    <form id="contactForm">
+      <input type="hidden" name="access_key" value="3b1bd309-3303-46bf-adcc-9098eeb9c9ed">
+      <input type="hidden" name="subject" value="New Project Inquiry 💼">
+      <input type="hidden" name="from_name" value="Opeyemi Ojo Portfolio">
+      <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
+      <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email">
+      <textarea name="message" placeholder="Your Message" required aria-label="Your Message"></textarea>
+      <div class="form-message" id="formMessage"></div>
+      
+      <button type="submit" class="btn btn-primary center-btn">Send Message</button>
+      <button type="button" id="whatsappBtn" class="btn btn-secondary center-btn"> Send via WhatsApp </button>
+    </form>
+  </div>
+  <div class="card">
+    <h3>FAQs</h3>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">What services do you offer?<span class="faq-arrow">▼</span></button>
+      <div class="faq-answer">I build Web apps, dashboards, landing pages, and scalable Frontend systems for startups and businesses.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">How long does a project take?<span class="faq-arrow">▼</span></button>
+      <div class="faq-answer">Project timelines vary based on complexity, typically ranging from 2-8 weeks.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">What's your pricing structure?<span class="faq-arrow">▼</span></button>
+      <div class="faq-answer">I offer flexible pricing based on project scope. Contact me for a custom quote.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">Do you work with international clients?<span class="faq-arrow">▼</span></button>
+      <div class="faq-answer">Yes, I work with clients globally and am experienced in remote collaboration.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">What's included in your services?<span class="faq-arrow">▼</span></button>
+      <div class="faq-answer">Full project management, design, development, testing, and post-launch support.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">Can you redesign an existing website?<span class="faq-arrow">▼</span></button>
+      <div class="faq-answer">Absolutely! I specialise in redesigns — improving aesthetics, performance, and UX while preserving your brand identity and existing content.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">Do you provide ongoing maintenance?<span class="faq-arrow">▼</span></button>
+      <div class="faq-answer">Yes, I offer flexible retainer packages for ongoing support, updates, bug fixes, and feature additions after launch.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">What technologies do you specialize in?<span class="faq-arrow">▼</span></button>
+      <div class="faq-answer">I specialise in React, Next.js, TypeScript, Tailwind CSS, and Node.js. I'm also experienced with Figma for design and can integrate with most backend services and APIs.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer card-bg">
+  <div class="footer-grid">
+
+    <!-- Col 1: Brand -->
+    <div class="footer-brand-col">
+      <span class="footer-logo">Opeyemi Ojo</span>
+      <p class="footer-tagline">Frontend Developer & UX Researcher crafting pixel-perfect, high-performance digital products — from Lagos to the world. Available for freelance and full-time roles.</p>
+      <div class="footer-socials">
+        <a href="https://x.com/opeyemiiojo" target="_blank" class="footer-social-btn" aria-label="Twitter">
+          <img src="images/Twitter.png" alt="Twitter">
+        </a>
+        <a href="https://github.com/Proffyjayz/" target="_blank" class="footer-social-btn" aria-label="GitHub">
+          <img src="images/GitHub.png" alt="GitHub">
+        </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ojoopeyemi234@gmail.com&su=New%20Project%20Inquiry%20💼"
+              target="_blank" class="footer-social-btn"> <span style="font-size:14px;">✉</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Col 2: Quick Links -->
+    <div class="footer-links-col">
+      <h5 class="footer-col-title">Quick Links</h5>
+      <ul class="footer-links-list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 3: Services -->
+    <div class="footer-links-col">
+      <h5 class="footer-col-title">My Services</h5>
+      <ul class="footer-links-list">
+        <li><a href="#skills">Frontend Development</a></li>
+        <li><a href="#skills">UI / UX Design</a></li>
+        <li><a href="#skills">API Integration</a></li>
+        <li><a href="#projects">Web App Development</a></li>
+        <li><a href="#industries">SaaS Products</a></li>
+        <li><a href="#contact">Consulting</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 4: Contact Us -->
+    <div class="footer-contact-col">
+      <h5 class="footer-col-title">Contact Us</h5>
+      <ul class="footer-contact-list">
+        <li class="footer-contact-item">
+          <span class="footer-contact-icon">📍</span>
+          <span>Lagos, Nigeria<br>(Open to Remote & Relocation)</span>
+        </li>
+        <li class="footer-contact-item">
+          <span class="footer-contact-icon">✉</span>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ojoopeyemi234@gmail.com&su=New%20Project%20Inquiry%20💼"
+              target="_blank">ojoopeyemi234@gmail.com </a>
+        </li>
+        <li class="footer-contact-item">
+          <img src="images/LinkedIn.png" alt="LinkedIn logo" class="social-icon">
+          <a href="https://www.linkedin.com/in/opeyemi-ojo-zzz" target="_blank">Opeyemi Ojo</a>
+        </li>
+        <li class="footer-contact-item">
+          <span class="footer-contact-icon">🕐</span>
+          <span>Mon – Fri: 9:00 AM – 6:00 PM WAT</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="footer-bottom">
+    <p>© 2026 Opeyemi Ojo. All rights reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Sitemap</a>
+    </div>
+  </div>
+</footer>
+
+<div id="imageModal" class="image-modal">
+  <span class="close-modal">&times;</span>
+  <img id="modalImage" src="" alt="Project Preview">
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg></button>
+
+<script src="script.js"></script>
+</body>
+</html>
