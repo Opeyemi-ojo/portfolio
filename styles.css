@@ -313,7 +313,7 @@ section {
    HERO SECTION
    ============================================================ */
 .hero {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -392,6 +392,7 @@ section {
 .pills-field {
   position: absolute; inset: 0;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .pill {
