@@ -135,12 +135,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
      /* ========== 5. DOWNLOAD CV ========== */
-  /* GitHub Pages serves PDFs with Content-Type: application/pdf, which causes
-     browsers to open them inline — the <a download> attribute is ignored.
-     Fix: fetch the PDF (same-origin on GitHub Pages = no CORS issues),
-     rewrap the blob as application/octet-stream (browsers have no inline
-     viewer for this type), then click a temporary anchor to trigger the
-     browser's native download bar — same mechanism Claude's download uses. */
  
   const downloadCVBtn = document.getElementById('downloadCVBtn');
  
@@ -175,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
         showToast('⬇ CV download started!', 'success');
       } catch (err) {
 
-        showToast('⚠ Use VS Code Live Server or push to GitHub Pages to test downloads.', 'error');
+        showToast('⚠ error downloading cv', 'error');
         console.warn('CV fetch blocked — likely running on file:// protocol.', err);
       } finally {
         downloadCVBtn.innerHTML = originalHTML;

@@ -168,7 +168,7 @@ section {
 }
 
 /* ============================================================
-   THEME TOGGLE (moved to top — was weather toggle position)
+   THEME TOGGLE 
    ============================================================ */
 .theme-toggle {
   position: fixed;
@@ -196,7 +196,7 @@ section {
 }
 
 /* ============================================================
-   HERO NAV (replaces old header)
+   HERO NAV 
    ============================================================ */
 .hero-nav {
   position: fixed;
@@ -527,18 +527,6 @@ section {
 .word-rotator span.leaving {
   opacity: 0;
   transform: translateX(-50%) translateY(-40px);
-}
-
-/* Cursor — positioned AFTER the rotator span, at end of word */
-.cursor-blink {
-  display: inline-block;
-  width: 3px;
-  height: 0.85em;
-  background: var(--accent);
-  margin-left: 4px;
-  vertical-align: middle;
-  border-radius: 1px;
-  animation: cursorBlink 1s ease infinite;
 }
 
 .sub {
