@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
       e.preventDefault();
  
       const fileUrl      = downloadCVBtn.getAttribute('href');
-      const fileName     = downloadCVBtn.getAttribute('download') || 'Opeyemi_Ojo_CV.pdf';
+      const fileName     = downloadCVBtn.getAttribute('download') || 'Opeyemi_Ojo_FullStack_Engineer.pdf';
       const originalHTML = downloadCVBtn.innerHTML;
  
       downloadCVBtn.innerHTML = '<span class="download-icon">⏳</span> Downloading…';
